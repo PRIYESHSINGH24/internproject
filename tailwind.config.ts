@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				builder: {
+					primary: '#0EA5E9',
+					secondary: '#E5DEFF',
+					accent: '#8B5CF6',
+					background: '#F1F0FB',
+					surface: '#FFFFFF',
+					border: '#D1D5DB',
+					text: '#1A1F2C'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'element-drag': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.02)' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'drop-highlight': {
+					'0%': { backgroundColor: 'rgba(139, 92, 246, 0)' },
+					'50%': { backgroundColor: 'rgba(139, 92, 246, 0.1)' },
+					'100%': { backgroundColor: 'rgba(139, 92, 246, 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'element-drag': 'element-drag 0.3s ease-in-out',
+				'drop-highlight': 'drop-highlight 0.5s ease-in-out'
 			}
 		}
 	},

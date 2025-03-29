@@ -1,8 +1,9 @@
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .logo {
@@ -39,4 +40,41 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Builder specific styles */
+.element-dragging {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.drop-zone {
+  min-height: 50px;
+  border: 2px dashed #d1d5db;
+  border-radius: 6px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.drop-zone.active {
+  border-color: #8B5CF6;
+  background-color: rgba(139, 92, 246, 0.05);
+}
+
+/* Make the builder responsive */
+@media (max-width: 768px) {
+  .builder-layout {
+    flex-direction: column;
+  }
+  
+  .elements-sidebar, 
+  .properties-panel {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    overflow-y: auto;
+  }
 }
