@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heading, Paragraph, Image, ChevronRight, Type, MoveRight } from 'lucide-react';
+import { Heading, Image, ChevronRight, Type, MoveRight, Text } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { useBuilder, ElementType } from '@/contexts/BuilderContext';
 
@@ -19,7 +19,7 @@ const ElementsSidebar = () => {
 
   const elements = [
     { type: 'heading' as ElementType, icon: <Type size={20} />, label: 'Heading' },
-    { type: 'paragraph' as ElementType, icon: <Paragraph size={20} />, label: 'Paragraph' },
+    { type: 'paragraph' as ElementType, icon: <Text size={20} />, label: 'Paragraph' },
     { type: 'image' as ElementType, icon: <Image size={20} />, label: 'Image' },
     { type: 'button' as ElementType, icon: <MoveRight size={20} />, label: 'Button' },
   ];
